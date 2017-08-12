@@ -1,5 +1,3 @@
-Deal is, at the moment, not released (on hex).
-
 # Deal
 
 This module is not about Monad or Maybe... it is just a shortcut
