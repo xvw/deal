@@ -6,9 +6,16 @@ defmodule Deal do
   @doc false 
   def __using__(_opts), do: quote do: import Deal
 
+  @doc false
   defp fresh_name(index), do: String.to_atom("deal_#{index}")
+
+  @doc false
   defp var(i), do: {fresh_name(i), [], __MODULE__}
+
+  @doc false
   defp ok(i), do: {:ok, var(i)}
+
+  @doc false
   defp clause(0, fun, xs), do: {:<-, [], [ok(1), {fun, [], xs}]}
   defp clause(i, fun, xs), do: {:<-, [], [ok(i+1), {fun, [], [var(i) | xs]}]}
 
@@ -24,6 +31,6 @@ defmodule Deal do
     new_expr = {:with, [], Enum.reverse clauses}
     quote bind_quoted: [new_expr: new_expr], do: new_expr
   end
-  
+
 
 end

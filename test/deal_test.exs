@@ -7,8 +7,9 @@ defmodule DealTest do
   # end
 
   def f(x), do: {:ok, x}
-  def g(x), do: {:ok, x+1}
+  def g(_), do: {:ok, 3}
   def h(x), do: {:ok, x+3}
+  def i(x), do: x+6
 
   test "Un test" do
 
@@ -19,8 +20,10 @@ defmodule DealTest do
       h()
     end
 
-    assert x == {:ok, 5}
-    
+    IO.inspect x
+
+    # assert x == {:ok, 6}
+
 
     
   end
