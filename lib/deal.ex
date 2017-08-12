@@ -61,7 +61,8 @@ defmodule Deal do
 
   """
   defmacro with!(block)
-  defmacro with!(do: {:__block__, _, expr}) do
+  defmacro with!(do: {operator, _, expr})
+  when operator in [:{}, :__block__] do
     {i, expr_body} = expr
     |> Enum.reduce({0, []},
     fn(value, {i, acc}) ->

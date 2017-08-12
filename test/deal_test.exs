@@ -14,9 +14,7 @@ defmodule DealTest do
   test "Un test" do
 
 
-    x = Deal.with! do
-      1 |> f(); g(); h()
-    end
+    x = Deal.with! do: (f(1); f(); h())
 
     IO.inspect x
 
