@@ -15,9 +15,7 @@ defmodule DealTest do
 
     
     x = Deal.with! do
-      1 |> f()
-      g()
-      h()
+      1 |> f(); g(); h()
     end
 
     IO.inspect x

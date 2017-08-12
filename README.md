@@ -1,16 +1,41 @@
 # Deal
 
-**TODO: Add description**
+This module is not about Monad or Maybe... it is just a shortcut
+over the pattern `{:ok, value}`.
 
+With **Deal**, you can write code like that:  
+
+
+```elixir
+Deal.with! do 
+  f(1) 
+  g()
+  h()
+end
+```
+    
+instead of: 
+    
+    
+```elixir
+with 
+    {:ok, a} -> f(1), 
+    {:ok, b} -> g(a), 
+    {:ok, c} -> h(b),
+do: {:ok, c}
+```
+
+You can checkout the [test file](test/deal_test.exs) for more examples.
+    
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+The package can be installed
 by adding `deal` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:deal, "~> 0.1.0"}
+    {:deal, "~> 1.0.0"}
   ]
 end
 ```
