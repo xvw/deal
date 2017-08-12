@@ -38,7 +38,7 @@ defmodule Deal.Mixfile do
   defp package do
     # These are the default files included in the package
     [
-      name: :postgrex,
+      name: :deal,
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Xavier Van de Woestyne"],
       licenses: ["MIT"],
