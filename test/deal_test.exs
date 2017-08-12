@@ -13,7 +13,7 @@ defmodule DealTest do
 
   test "Un test" do
 
-    
+
     x = Deal.with! do
       1 |> f(); g(); h()
     end
@@ -23,8 +23,8 @@ defmodule DealTest do
     # assert x == {:ok, 6}
 
 
-    
+
   end
 
-  
+
 end
