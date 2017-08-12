@@ -39,7 +39,7 @@ defmodule Deal.Mixfile do
     # These are the default files included in the package
     [
       name: :postgrex,
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Xavier Van de Woestyne"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/xvw/deal"}
