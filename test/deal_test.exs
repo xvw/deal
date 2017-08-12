@@ -7,19 +7,20 @@ defmodule DealTest do
   # end
 
   def f(x), do: {:ok, x}
-  def g(x), do: {:ok, x}
+  def g(x), do: {:ok, x+1}
+  def h(x), do: {:ok, x+3}
 
   test "Un test" do
-    import Deal
 
     
-    x = with! do
-      43
-      f()
+    x = Deal.with! do
+      1 |> f()
       g()
+      h()
     end
 
-    IO.inspect x
+    assert x == {:ok, 5}
+    
 
     
   end
