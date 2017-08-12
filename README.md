@@ -1,4 +1,4 @@
-Deal is, at the moment, not realsed (on hex).
+Deal is, at the moment, not released (on hex).
 
 # Deal
 
