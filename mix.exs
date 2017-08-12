@@ -30,7 +30,7 @@ defmodule Deal.Mixfile do
 
   defp description do
     """
-    Deal is a shortcut to chain function that returns 
+    Deal is a shortcut to chain function that returns
     data using the pattern `{:ok, value}`.
     """
   end
