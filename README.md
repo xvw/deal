@@ -18,9 +18,9 @@ instead of:
 
 ```elixir
 with
-    {:ok, a} -> f(1),
-    {:ok, b} -> g(a),
-    {:ok, c} -> h(b),
+    {:ok, a} <- f(1),
+    {:ok, b} <- g(a),
+    {:ok, c} <- h(b),
 do: {:ok, c}
 ```
 
